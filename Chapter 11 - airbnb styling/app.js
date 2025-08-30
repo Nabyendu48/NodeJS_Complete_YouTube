@@ -11,8 +11,8 @@ const rootDir = require("./utils/pathUtil");
 
 const app = express();
 
-app.use(express.urlencoded());
 app.use(userRouter);
+app.use(express.urlencoded());
 app.use("/host", hostRouter);
 
 app.use(express.static(path.join(rootDir, 'public')))
